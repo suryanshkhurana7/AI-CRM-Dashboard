@@ -1,5 +1,13 @@
 import { NavLink, useNavigate } from "react-router-dom";
-import { Search, Bell, Menu, ChevronDown, User, LogOut, Sparkles } from "lucide-react";
+import {
+  Search,
+  Bell,
+  Menu,
+  ChevronDown,
+  User,
+  LogOut,
+  Sparkles,
+} from "lucide-react";
 import {
   Avatar,
   IconButton,
@@ -33,7 +41,7 @@ export function TopNav({ onMenuClick }) {
           <Sparkles className="h-5 w-5" />
         </div>
         <span className="hidden font-display text-lg font-bold text-ink sm:block">
-          TTP CRM
+          AI CRM
         </span>
       </div>
 
@@ -58,7 +66,7 @@ export function TopNav({ onMenuClick }) {
                 "rounded-full px-5 py-2 text-sm font-medium transition",
                 isActive
                   ? "bg-surface-muted text-ink shadow-sm"
-                  : "text-ink-soft hover:text-ink"
+                  : "text-ink-soft hover:text-ink",
               )
             }
           >

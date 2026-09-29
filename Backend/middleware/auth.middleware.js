@@ -1,3 +1,4 @@
+import jwt from "jsonwebtoken";
 import { User } from "../models/User.js";
 import { asyncHandler } from "../utils/asyncHandler.js";
 import { ApiError } from "../utils/ApiError.js";
@@ -7,7 +8,7 @@ export const protect = asyncHandler(async (req, res, next) => {
   const header = req.headers.authorization;
 
   if (header && header.startsWith("Bearer ")) {
-    token = header.split("")[1];
+    token = header.split(" ")[1];
   }
 
   if (!token) {
@@ -16,7 +17,7 @@ export const protect = asyncHandler(async (req, res, next) => {
 
   let decoded;
   try {
-    decoded = JsonWebTokenError.verify(token, process.env.JWT_SECRET);
+    decoded = jwt.verify(token, process.env.JWT_SECRET);
   } catch {
     throw new ApiError(401, "Not authorized, token invalid or expired");
   }

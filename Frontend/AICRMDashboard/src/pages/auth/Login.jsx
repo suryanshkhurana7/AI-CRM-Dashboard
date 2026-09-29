@@ -43,7 +43,7 @@ export default function Login() {
     <AuthShell>
       <h1 className="text-2xl font-bold text-ink">Welcome back</h1>
       <p className="mt-1.5 text-sm text-ink-soft">
-        Sign in to your TTP CRM workspace.
+        Sign in to your AI CRM workspace.
       </p>
 
       <form onSubmit={handleSubmit(onSubmit)} className="mt-8 space-y-4">
@@ -85,7 +85,10 @@ export default function Login() {
 
       <p className="mt-6 text-center text-sm text-ink-soft">
         Don't have an account?{" "}
-        <Link to="/register" className="font-semibold text-brand-700 hover:underline">
+        <Link
+          to="/register"
+          className="font-semibold text-brand-700 hover:underline"
+        >
           Create one
         </Link>
       </p>

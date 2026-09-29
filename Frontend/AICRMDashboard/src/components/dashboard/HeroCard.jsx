@@ -9,7 +9,11 @@ import { currency } from "../../lib/format";
 export function HeroCard({ value = 0, label = "Pipeline value" }) {
   return (
     <Card className="p-6">
-      <SectionHeading title="Pipeline Goal" subtitle="Total deal value" to="/pipeline" />
+      <SectionHeading
+        title="Pipeline Goal"
+        subtitle="Total deal value"
+        to="/pipeline"
+      />
 
       <div className="brand-gradient relative mt-5 overflow-hidden rounded-2xl p-5 text-white shadow-[var(--shadow-soft)]">
         {/* Decorative glow */}
@@ -17,7 +21,7 @@ export function HeroCard({ value = 0, label = "Pipeline value" }) {
 
         <div className="relative flex items-start justify-between">
           <span className="font-display text-lg font-extrabold tracking-tight">
-            TTP CRM
+            AI CRM
           </span>
           <Wifi className="h-6 w-6 rotate-90 opacity-90" />
         </div>

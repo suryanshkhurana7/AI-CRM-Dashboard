@@ -22,7 +22,7 @@ export default function Register() {
     setSubmitting(true);
     try {
       await registerUser(data);
-      toast.success("Account created — welcome to TTP CRM! 🎉");
+      toast.success("Account created — welcome to AI CRM! 🎉");
       navigate("/", { replace: true });
     } catch (err) {
       toast.error(err.message || "Registration failed");
@@ -95,7 +95,10 @@ export default function Register() {
 
       <p className="mt-6 text-center text-sm text-ink-soft">
         Already have an account?{" "}
-        <Link to="/login" className="font-semibold text-brand-700 hover:underline">
+        <Link
+          to="/login"
+          className="font-semibold text-brand-700 hover:underline"
+        >
           Sign in
         </Link>
       </p>
