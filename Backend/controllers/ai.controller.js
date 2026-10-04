@@ -25,7 +25,7 @@ export const aiStatus = asyncHandler(async (req, res) => {
   res.json({
     success: true,
     configured: isAIConfigured(),
-    model: process.env.GEMINI_MODEL || "gemini-2.5-flash",
+    model: process.env.GEMINI_MODEL || "gemini-3.5-flash-lite",
   });
 });
 

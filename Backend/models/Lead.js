@@ -33,7 +33,7 @@ const leadSchema = new mongoose.Schema(
       ],
       default: "Other",
     },
-    vlaue: { type: Number, default: 0, min: 0 },
+    value: { type: Number, default: 0, min: 0 },
     notes: { type: String, default: "" },
     tags: [{ type: String, trim: true }],
     aiSummary: { type: String, default: "" },
