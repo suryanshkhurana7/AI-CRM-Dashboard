@@ -104,7 +104,7 @@ const lastSixMonths = () => {
     const d = new Date(now.getFullYear(), now.getMonth() - i, 1);
     out.push({
       key: `${d.getFullYear()}-${d.getMonth()}`,
-      labels: labels[d.getMonth()],
+      label: labels[d.getMonth()],
     });
   }
   return out;

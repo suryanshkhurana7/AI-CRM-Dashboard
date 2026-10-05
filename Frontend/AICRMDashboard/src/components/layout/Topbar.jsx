@@ -1,4 +1,4 @@
-import { Search, Bell, Menu, ChevronDown, User, LogOut } from "lucide-react";
+import { Search, Bell, Menu, ChevronDown, User, LogOut, Sun, Moon } from "lucide-react";
 import {
   Avatar,
   Dropdown,
@@ -7,11 +7,13 @@ import {
   DropdownSeparator,
 } from "../ui";
 import { useAuth } from "../../context/AuthContext";
+import { useTheme } from "../../context/ThemeContext";
 import { useNavigate } from "react-router-dom";
 
 /* Sticky top navbar: mobile menu toggle, global search, notifications, profile. */
 export function Topbar({ onMenuClick }) {
   const { user, logout } = useAuth();
+  const { theme, toggleTheme } = useTheme();
   const navigate = useNavigate();
 
   return (
@@ -34,6 +36,14 @@ export function Topbar({ onMenuClick }) {
       </div>
 
       <div className="ml-auto flex items-center gap-2">
+        <button
+          onClick={toggleTheme}
+          className="relative rounded-full border border-line bg-surface p-2.5 text-ink-soft transition hover:text-ink"
+          aria-label="Toggle Theme"
+        >
+          {theme === "dark" ? <Sun className="h-[18px] w-[18px]" /> : <Moon className="h-[18px] w-[18px]" />}
+        </button>
+
         <button
           className="relative rounded-full border border-line bg-surface p-2.5 text-ink-soft transition hover:text-ink"
           aria-label="Notifications"

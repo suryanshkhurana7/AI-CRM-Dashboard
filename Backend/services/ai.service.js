@@ -119,7 +119,7 @@ export const generateEmail = async ({ lead, purpose, tone, sender }) => {
   return generateJSON(prompt, schema);
 };
 
-export const generateSalesInsights = async () => {
+export const generateSalesInsights = async (pipelineStats) => {
   const prompt = `You are a revenue-operations advisor. Given this snapshot of a sales pipeline, identify what is working, what is at risk, and concrete actions to improve conversions.
 
   Pipeline snapshot (JSON):

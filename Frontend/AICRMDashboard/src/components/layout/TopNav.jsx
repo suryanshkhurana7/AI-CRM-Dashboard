@@ -7,6 +7,8 @@ import {
   User,
   LogOut,
   Sparkles,
+  Sun,
+  Moon,
 } from "lucide-react";
 import {
   Avatar,
@@ -17,6 +19,7 @@ import {
   DropdownSeparator,
 } from "../ui";
 import { useAuth } from "../../context/AuthContext";
+import { useTheme } from "../../context/ThemeContext";
 import { cn } from "../../lib/utils";
 
 /* Centered text links — a subset of the primary nav, rendered in a white pill
@@ -31,6 +34,7 @@ const LINKS = [
 
 export function TopNav({ onMenuClick }) {
   const { user, logout } = useAuth();
+  const { theme, toggleTheme } = useTheme();
   const navigate = useNavigate();
 
   return (
@@ -77,6 +81,13 @@ export function TopNav({ onMenuClick }) {
 
       {/* Right cluster */}
       <div className="ml-auto flex items-center gap-2">
+        <IconButton aria-label="Toggle Theme" onClick={toggleTheme}>
+          {theme === "dark" ? (
+            <Sun className="h-[18px] w-[18px]" />
+          ) : (
+            <Moon className="h-[18px] w-[18px]" />
+          )}
+        </IconButton>
         <IconButton aria-label="Search" className="hidden sm:inline-flex">
           <Search className="h-[18px] w-[18px]" />
         </IconButton>

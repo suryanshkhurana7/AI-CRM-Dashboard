@@ -5,18 +5,21 @@ import { Toaster } from "sonner";
 import "./index.css";
 import App from "./App.jsx";
 import { AuthProvider } from "./context/AuthContext.jsx";
+import { ThemeProvider } from "./context/ThemeContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
       <AuthProvider>
-        <App />
+        <ThemeProvider>
+          <App />
         {/* Global toast notifications */}
         <Toaster
           position="top-right"
           richColors
           toastOptions={{ style: { borderRadius: "14px" } }}
         />
+        </ThemeProvider>
       </AuthProvider>
     </BrowserRouter>
   </StrictMode>
