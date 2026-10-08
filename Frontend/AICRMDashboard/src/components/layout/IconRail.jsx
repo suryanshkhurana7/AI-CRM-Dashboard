@@ -35,13 +35,13 @@ function RailLink({ to, label, icon: Icon, end }) {
           "group relative flex h-11 w-11 items-center justify-center rounded-2xl transition",
           isActive
             ? "brand-gradient text-white shadow-sm"
-            : "text-ink-soft hover:bg-surface-muted hover:text-ink"
+            : "text-ink-soft hover:bg-surface-muted hover:text-ink",
         )
       }
     >
       <Icon className="h-5 w-5" />
       {/* Tooltip on hover */}
-      <span className="pointer-events-none absolute left-full ml-3 hidden whitespace-nowrap rounded-lg bg-ink px-2.5 py-1 text-xs font-medium text-white opacity-0 transition group-hover:opacity-100 lg:block">
+      <span className="pointer-events-none absolute left-full ml-3 hidden whitespace-nowrap rounded-lg bg-ink px-2.5 py-1 text-xs font-medium text-line opacity-0 transition group-hover:opacity-100 lg:block">
         {label}
       </span>
     </NavLink>

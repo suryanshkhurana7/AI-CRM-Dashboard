@@ -1,4 +1,4 @@
-import { Search, Bell, Menu, ChevronDown, User, LogOut, Sun, Moon } from "lucide-react";
+import { Menu, ChevronDown, User, LogOut, Sun, Moon } from "lucide-react";
 import {
   Avatar,
   Dropdown,
@@ -26,30 +26,17 @@ export function Topbar({ onMenuClick }) {
         <Menu className="h-5 w-5" />
       </button>
 
-      {/* Search */}
-      <div className="relative flex-1 max-w-md">
-        <Search className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-soft" />
-        <input
-          placeholder="Search leads, contacts…"
-          className="h-10 w-full rounded-full border border-line bg-surface pl-10 pr-4 text-sm text-ink placeholder:text-ink-soft/70 focus:border-brand-400 focus:outline-none focus:ring-2 focus:ring-brand-500/20"
-        />
-      </div>
-
       <div className="ml-auto flex items-center gap-2">
         <button
           onClick={toggleTheme}
           className="relative rounded-full border border-line bg-surface p-2.5 text-ink-soft transition hover:text-ink"
           aria-label="Toggle Theme"
         >
-          {theme === "dark" ? <Sun className="h-[18px] w-[18px]" /> : <Moon className="h-[18px] w-[18px]" />}
-        </button>
-
-        <button
-          className="relative rounded-full border border-line bg-surface p-2.5 text-ink-soft transition hover:text-ink"
-          aria-label="Notifications"
-        >
-          <Bell className="h-[18px] w-[18px]" />
-          <span className="absolute right-2.5 top-2.5 h-2 w-2 rounded-full bg-brand-500 ring-2 ring-surface" />
+          {theme === "dark" ? (
+            <Sun className="h-[18px] w-[18px]" />
+          ) : (
+            <Moon className="h-[18px] w-[18px]" />
+          )}
         </button>
 
         <Dropdown
