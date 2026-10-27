@@ -53,11 +53,7 @@ export default function Register() {
         <Field label="Company" error={errors.company?.message}>
           <div className="relative">
             <Building2 className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-soft" />
-            <Input
-              placeholder="Time To Program"
-              className="pl-9"
-              {...register("company")}
-            />
+            <Input placeholder="AI" className="pl-9" {...register("company")} />
           </div>
         </Field>
 

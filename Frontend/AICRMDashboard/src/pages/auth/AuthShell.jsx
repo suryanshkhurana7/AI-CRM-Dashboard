@@ -13,9 +13,7 @@ export function AuthShell({ children }) {
           <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-white/15">
             <Sparkles className="h-5 w-5" />
           </div>
-          <span className="font-display text-lg font-bold">
-            Time To Program CRM
-          </span>
+          <span className="font-display text-lg font-bold">AI CRM</span>
         </div>
 
         <div className="relative">
@@ -50,7 +48,7 @@ export function AuthShell({ children }) {
         </div>
 
         <p className="relative text-xs text-white/50">
-          © {new Date().getFullYear()} Time To Program. All rights reserved.
+          © {new Date().getFullYear()} AI CRM. All rights reserved.
         </p>
       </div>
 
